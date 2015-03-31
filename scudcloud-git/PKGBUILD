@@ -2,13 +2,13 @@
 
 _pkgname=scudcloud
 pkgname=${_pkgname}-git
-pkgver=v1.0.21.r12.gcad4214
-pkgrel=1
+pkgver=v1.0.21.r16.gf9fda40
+pkgrel=2
 pkgdesc="A Linux client for Slack"
 arch=('any')
 url="https://github.com/raelgc/${_pkgname}"
 license=('MIT')
-depends=('python-pyqt4')
+depends=('python-dbus' 'python-pyqt4')
 makedepends=('git')
 provides=("${_pkgname}")
 conflicts=("${_pkgname}")
