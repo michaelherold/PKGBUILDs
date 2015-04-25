@@ -28,7 +28,9 @@ package() {
              "${pkgdir}/opt/${_pkgname}/lib" \
              "${pkgdir}/opt/${_pkgname}/resources" \
              "${pkgdir}/usr/bin" \
-             "${pkgdir}/usr/share/icons/hicolor/scalable/apps"
+             "${pkgdir}/usr/share/icons/hicolor/scalable/apps" \
+             "${pkgdir}/usr/share/icons/mono-dark/scalable/apps" \
+             "${pkgdir}/usr/share/icons/mono-light/scalable/apps"
 
   install -Dm644 lib/*.py "${pkgdir}/opt/${_pkgname}/lib"
   install -Dm644 resources/* "${pkgdir}/opt/${_pkgname}/resources/"
@@ -39,6 +41,12 @@ package() {
 
   install -Dm644 systray/hicolor/* \
                  "${pkgdir}/usr/share/icons/hicolor/scalable/apps"
+
+  install -Dm644 systray/mono-dark/* \
+                 "${pkgdir}/usr/share/icons/mono-dark/scalable/apps"
+
+  install -Dm644 systray/mono-light/* \
+                 "${pkgdir}/usr/share/icons/mono-light/scalable/apps"
 
   install -Dm755 "${_pkgname}" "${pkgdir}/opt/${_pkgname}/${_pkgname}"
 
